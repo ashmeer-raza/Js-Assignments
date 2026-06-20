@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#theme {
+  height: 20%;
+  width: 20%;
+  background-color: transparent;
+  color: wheat;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.dark-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 5px solid wheat;
+}
+
+.light-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: wheat;
+  color: black;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 5px solid black;
+}
+
+/* These two classes will control the THEME of main */
+.darked {
+  background-color: black;
+  color: wheat;
+}
+
+.light {
+  background-color: wheat;
+  color: black;
+}
