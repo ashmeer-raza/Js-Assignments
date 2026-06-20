@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  background-color: darkslategrey;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+button {
+  font-size: 2rem;
+  border: none;
+  border-radius: 2rem;
+  padding: 2rem 5rem;
+  background-color: rgb(82, 201, 82);
+  transition: all 0.3s ease-in-out;
+}
+
+button:active {
+  transform: scale(2);
+}
+
+h1 {
+  color: aliceblue;
+  font-size: 5rem;
+  padding: 2rem;
+}

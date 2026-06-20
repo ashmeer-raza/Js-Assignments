@@ -23,6 +23,7 @@ form.addEventListener("submit", (e) => {
 });
 
 ul.addEventListener("click", (e) => {
+  //ul = parent element ,  e.target = the actual element that was clicked
   if (e.target.classList.contains("edit")) {
     const h1 = e.target.parentElement.querySelector("h1");
     const newText = prompt("Edit task:", h1.textContent);
@@ -37,6 +38,5 @@ ul.addEventListener("click", (e) => {
 
   if (e.target.classList.contains("complete")) {
     e.target.parentElement.style.textDecoration = "line-through";
-    
   }
 });
