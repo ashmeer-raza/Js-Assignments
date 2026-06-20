@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+}
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  padding: 1rem;
+}
+
+input {
+  padding: 1rem;
+  font-size: 2rem;
+  margin-right: 2rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  margin: 1rem;
+  background: wheat;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+button:active {
+  transform: scale(0.8);
+}
+
+.edit,
+.complete {
+  background-color: lightgreen;
+}
+
+.delete {
+  background-color: lightcoral;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
