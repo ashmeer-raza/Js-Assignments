@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Rendering Pipeline</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="pipeline-section">
+      <h2>How a Browser Shows Your Webpage</h2>
+      <p>Click the button. Watch each step light up in order.</p>
+
+      <button id="playBtn">▶ Watch it happen</button>
+
+      <div class="pipeline-columns">
+        <div class="pipeline-column">
+          <div class="box" id="step1">
+            <span class="title">HTML</span>
+            <span class="desc">Your webpage's code</span>
+          </div>
+          <span class="arrow">↓</span>
+          <div class="box" id="step2">
+            <span class="title">Parsing</span>
+            <span class="desc">Browser reads the code</span>
+          </div>
+          <span class="arrow">↓</span>
+          <div class="box" id="step3">
+            <span class="title">Tokenization</span>
+            <span class="desc">Code is cut into small pieces</span>
+          </div>
+          <span class="arrow">↓</span>
+          <div class="box" id="step4">
+            <span class="title">DOM Tree</span>
+            <span class="desc">Pieces are joined into a tree</span>
+          </div>
+        </div>
+
+        <div class="pipeline-column">
+          <div class="box" id="step5">
+            <span class="title">CSS</span>
+            <span class="desc">Your style rules</span>
+          </div>
+          <span class="arrow">↓</span>
+          <div class="box" id="step6">
+            <span class="title">CSSOM Tree</span>
+            <span class="desc">Style rules joined into a tree</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="merge">↘ + ↙</div>
+
+      <div class="render-box" id="step7">
+        <span class="title">Render Tree</span>
+        <span class="desc"
+          >Both trees join together. Now the page can show on screen.</span
+        >
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
