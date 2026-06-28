@@ -6,4 +6,4 @@
 const root = document.querySelector(".root");
 
 const rh1 = React.createElement("h1", {}, "Hey");
-const vDOM = ReactDom.createRoot(root).render(rh1);
+ReactDOM.createRoot(root).render(rh1);
