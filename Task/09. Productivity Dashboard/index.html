@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ============ DASHBOARD (home screen) ============ -->
+    <main id="dashboard" class="dashboard">
+      <h1 class="dashboard-title">Productivity Dashboard</h1>
+      <p class="dashboard-subtitle">Pick a tool to get started</p>
+
+      <div class="card-grid">
+        <!-- data-feature tells our JS WHICH section to open -->
+        <button class="card" data-feature="todo">
+          <span class="card-icon">📝</span>
+          <span class="card-title">Todo List</span>
+        </button>
+
+        <button class="card" data-feature="planner">
+          <span class="card-icon">🗓️</span>
+          <span class="card-title">Daily Planner</span>
+        </button>
+
+        <button class="card" data-feature="goals">
+          <span class="card-icon">🎯</span>
+          <span class="card-title">Daily Goals</span>
+        </button>
+
+        <button class="card" data-feature="pomodoro">
+          <span class="card-icon">⏱️</span>
+          <span class="card-title">Pomodoro Timer</span>
+        </button>
+
+        <button class="card" data-feature="quote">
+          <span class="card-icon">💬</span>
+          <span class="card-title">Motivation Quote</span>
+        </button>
+
+        <button class="card" data-feature="weather">
+          <span class="card-icon">🌤️</span>
+          <span class="card-title">Weather Widget</span>
+        </button>
+
+        <button class="card" data-feature="datetime">
+          <span class="card-icon">🕒</span>
+          <span class="card-title">Date &amp; Time</span>
+        </button>
+
+        <button class="card" data-feature="background">
+          <span class="card-icon">🎨</span>
+          <span class="card-title">Dynamic Background</span>
+        </button>
+
+        <button class="card" data-feature="theme">
+          <span class="card-icon">🌓</span>
+          <span class="card-title">Theme Switch</span>
+        </button>
+      </div>
+    </main>
+
+    <!-- ============ TODO LIST FEATURE (hidden by default) ============ -->
+    <section id="todo" class="feature hidden" data-feature-section="todo">
+      <button class="back-btn" data-action="back">← Back</button>
+      <h2>Todo List</h2>
+
+      <div class="todo-input-row">
+        <input
+          type="text"
+          id="todoInput"
+          placeholder="What do you need to do?"
+        />
+        <button id="addTodoBtn">Add Task</button>
+      </div>
+
+      <ul id="todoList" class="todo-list">
+        <!-- task items get added here by JavaScript -->
+      </ul>
+    </section>
+
+    <!-- ============ DAILY PLANNER ============ -->
+    <section id="planner" class="feature hidden" data-feature-section="planner">
+      <button class="back-btn" data-action="back">← Back</button>
+      <h2>Daily Planner</h2>
+      <div id="plannerSlots" class="planner-slots">
+        <!-- hourly slots get built by JavaScript -->
+      </div>
+    </section>
+
+    <!-- ============ DAILY GOALS ============ -->
+    <section id="goals" class="feature hidden" data-feature-section="goals">
+      <button class="back-btn" data-action="back">← Back</button>
+      <h2>Daily Goals</h2>
+
+      <div class="todo-input-row">
+        <input type="text" id="goalInput" placeholder="What's today's goal?" />
+        <button id="addGoalBtn">Add Goal</button>
+      </div>
+
+      <p id="goalProgress" class="goal-progress">0 of 0 completed</p>
+
+      <ul id="goalList" class="todo-list">
+        <!-- goal items get added here -->
+      </ul>
+    </section>
+
+    <!-- ============ POMODORO TIMER ============ -->
+    <section
+      id="pomodoro"
+      class="feature hidden"
+      data-feature-section="pomodoro"
+    >
+      <button class="back-btn" data-action="back">← Back</button>
+      <h2>Pomodoro Timer</h2>
+
+      <p id="sessionLabel" class="session-label">Work Session</p>
+      <p id="timerDisplay" class="timer-display">25:00</p>
+
+      <div class="timer-controls">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+    </section>
+
+    <!-- ============ MOTIVATION QUOTE ============ -->
+    <section id="quote" class="feature hidden" data-feature-section="quote">
+      <button class="back-btn" data-action="back">← Back</button>
+      <h2>Motivation Quote</h2>
+
+      <blockquote id="quoteText" class="quote-text">
+        Click "New Quote" to get inspired.
+      </blockquote>
+      <p id="quoteAuthor" class="quote-author"></p>
+
+      <button id="newQuoteBtn">New Quote</button>
+    </section>
+
+    <!-- ============ WEATHER WIDGET ============ -->
+    <section id="weather" class="feature hidden" data-feature-section="weather">
+      <button class="back-btn" data-action="back">← Back</button>
+      <h2>Weather Widget</h2>
+
+      <div id="weatherContent" class="weather-content">
+        <p>Click below to check your local weather.</p>
+        <button id="getWeatherBtn">Get My Weather</button>
+      </div>
+    </section>
+
+    <!-- ============ DATE & TIME ============ -->
+    <section
+      id="datetime"
+      class="feature hidden"
+      data-feature-section="datetime"
+    >
+      <button class="back-btn" data-action="back">← Back</button>
+      <h2>Date &amp; Time</h2>
+
+      <p id="dateDisplay" class="date-display"></p>
+      <p id="timeDisplay" class="time-display"></p>
+    </section>
+
+    <!-- ============ DYNAMIC BACKGROUND ============ -->
+    <section
+      id="background"
+      class="feature hidden"
+      data-feature-section="background"
+    >
+      <button class="back-btn" data-action="back">← Back</button>
+      <h2>Dynamic Background</h2>
+      <p>
+        The dashboard background changes automatically based on the time of day.
+      </p>
+      <p id="backgroundLabel" class="background-label">Current mood: —</p>
+    </section>
+
+    <!-- ============ THEME SWITCH ============ -->
+    <section id="theme" class="feature hidden" data-feature-section="theme">
+      <button class="back-btn" data-action="back">← Back</button>
+      <h2>Theme Switch</h2>
+      <p>Toggle between light and dark mode. Your choice is remembered.</p>
+
+      <label class="theme-toggle">
+        <input type="checkbox" id="themeToggle" />
+        <span>Dark mode</span>
+      </label>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
