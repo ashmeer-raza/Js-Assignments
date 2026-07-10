@@ -332,7 +332,7 @@ body {
 
 /* ===== Dark theme (toggled via .dark-mode on <body>) ===== */
 body.dark-mode {
-  --bg: #14161f;
+  --bg: #000;
   --surface: #1e2130;
   --text: #f1f2f6;
   --text-muted: #9ca3af;
